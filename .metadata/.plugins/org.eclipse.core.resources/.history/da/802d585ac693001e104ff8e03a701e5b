@@ -1,0 +1,26 @@
+package com.challenge01.challenge01_spring.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.challenge01.challenge01_spring.entities.Order;
+
+@Service
+public class ShippingService {
+	
+	
+	
+	public double shipment(Order order) {
+		if(order.getBasic() < 100) {
+			
+			return order.getBasic() + 20;
+		}else if(order.getBasic() > 100 && order.getBasic()< 200) {
+			
+			return order.getBasic() + 12;
+		}else {
+			return order.getBasic();
+		}
+		
+	}
+
+}

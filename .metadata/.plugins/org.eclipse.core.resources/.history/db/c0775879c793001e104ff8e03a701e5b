@@ -1,0 +1,25 @@
+package com.challenge01.challenge01_spring.services;
+
+import org.springframework.stereotype.Service;
+
+import com.challenge01.challenge01_spring.entities.Order;
+
+@Service
+public class ShippingService {
+	
+	private Orderservice orderService;
+	
+	public double shipment(Order order) {
+		if(order.getBasic() < 100.0) {
+			
+			return orderService.total(order) + 20.0;
+		}else if(order.getBasic() > 100.0 && order.getBasic()< 200.0) {
+			
+			return orderService.total(order) + 12.0;
+		}else {
+			return orderService.total(order);
+		}
+		
+	}
+
+}

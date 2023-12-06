@@ -1,0 +1,29 @@
+package com.challenge01.challenge01_spring;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.challenge01.challenge01_spring.entities.Order;
+
+@SpringBootApplication
+public class Challenge01SpringApplication implements CommandLineRunner {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Challenge01SpringApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		
+		Order or =new Order(158, 1000.0, 20.0);
+		
+		or.discountOrder();
+		
+		
+		System.out.println("Desconto "+or);
+		
+		
+	}
+
+}

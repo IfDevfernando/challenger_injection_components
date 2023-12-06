@@ -1,0 +1,9 @@
+package com.challenge01.challenge01_spring.entities;
+
+public class Order {
+	
+	private Integer code;
+	private Double basic;
+	private Double discount;
+
+}

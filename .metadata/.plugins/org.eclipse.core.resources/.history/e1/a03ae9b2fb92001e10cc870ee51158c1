@@ -1,0 +1,9 @@
+package com.challenge01.challenge01_spring.services;
+
+public class Orderservice {
+	
+	public double total() {
+		
+	}
+
+}

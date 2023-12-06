@@ -1,0 +1,11 @@
+package com.challenge01.challenge01_spring.services;
+
+import com.challenge01.challenge01_spring.entities.Order;
+
+public class Orderservice {
+	
+	public double total(Order order) {
+		return 0;
+	}
+
+}
